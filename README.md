@@ -1,5 +1,11 @@
 # Valida datos de tarjetas de crédito
 
+* **Track:** _Common Core_
+* **Curso:** _JS Deep Dive: Crea tu propia librería usando JavaScript_
+* **Unidad:** _Producto final_
+
+***
+
 El plugin debe recibir una referencia a un elemento del DOM que contenga
 `<input>`s con los siguientes nombres (atributo `name`):
 
