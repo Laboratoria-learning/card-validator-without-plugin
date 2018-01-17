@@ -49,8 +49,6 @@ form.addEventListener('submit', (e) => {
     console.log('datos inválidos');
   }
 });
-
-validateCardDetails(document.querySelector('form'));
 ```
 
 A la hora de hacer las validaciones, la librería debería de añadir la clase
