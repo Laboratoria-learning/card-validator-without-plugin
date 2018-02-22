@@ -63,10 +63,12 @@ Usar el algoritmo de Luhn, el cual únicamente usa los numeros de la tarjeta de 
 
 #### Cosas a considerar:
 
-1. Los metodos .forEach, .map,etc. Son para **arreglos**. Si yo hago:
+1. Necesitas usar métodos de arreglo (.forEach, .map,etc.) sin embargo, estos metodos son para **arreglos**. Si yo hago:
 
 ```javascript
 const form = document.querySelector("form");
 ```
 
 ¿Tengo un arreglo? ¿Algo diferente? ¿Cómo le hago para implementar metodos de arreglo en otras cosas que no son arreglos?
+
+2. La solucion se tiene que hacer **con ES6** con los temas vistos en clase.
