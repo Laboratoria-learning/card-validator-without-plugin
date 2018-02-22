@@ -4,9 +4,9 @@
 * **Curso:** _JS Deep Dive: Crea tu propia librería usando JavaScript_
 * **Unidad:** _Producto final_
 
-***
+---
 
-El plugin debe recibir una referencia a un elemento del DOM que contenga
+La función debe recibir un elemento DOM que contenga
 `<input>`s con los siguientes nombres (atributo `name`):
 
 * `cn` (Card Number): El número de la tarjeta de crédito
@@ -39,18 +39,34 @@ El plugin debe recibir una referencia a un elemento del DOM que contenga
 ```
 
 ```js
-const form = document.querySelector('form');
+const form = document.querySelector("form");
 
-form.addEventListener('submit', (e) => {
+form.addEventListener("submit", e => {
   e.preventDefault();
   if (validateCardDetails(form)) {
-    console.log('datos válido... enviar...');
+    console.log("datos válido... enviar...");
   } else {
-    console.log('datos inválidos');
+    console.log("datos inválidos");
   }
 });
+
+function validateCardDetails(element) {
+  //escribe tu código aqui
+}
 ```
 
-A la hora de hacer las validaciones, la librería debería de añadir la clase
+A la hora de hacer las validaciones, tu funcion debería de añadir la clase
 `.error` a los `<input>`s que no pasen la validación, o la clase `.success`
 en caso de que sí pase.
+
+Usar el algoritmo de Luhn, el cual únicamente usa los numeros de la tarjeta de crédito. **No** usa el código de verificacion, fecha de vencimiento , el nombre, ni la dirección.
+
+#### Cosas a considerar:
+
+1. Los metodos .forEach, .map,etc. Son para **arreglos**. Si yo hago:
+
+```javascript
+const form = document.querySelector("form");
+```
+
+¿Tengo un arreglo? ¿Algo diferente? ¿Cómo le hago para implementar metodos de arreglo en otras cosas que no son arreglos?
