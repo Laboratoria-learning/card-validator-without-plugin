@@ -1,74 +1,38 @@
-# Valida datos de tarjetas de crédito
+#Pseudocódigo
 
-* **Track:** _Common Core_
-* **Curso:** _JS Deep Dive: Crea tu propia librería usando JavaScript_
-* **Unidad:** _Producto final_
+-Pedir el numero de tarjeta por medio de un form
 
----
+-desabilitar el boton de verificar/pagar por dafault
 
-La función debe recibir un elemento DOM que contenga
-`<input>`s con los siguientes nombres (atributo `name`):
+-si no se ingresan 16 numeros o si esta vacio desabilitar boton-- if()
 
-* `cn` (Card Number): El número de la tarjeta de crédito
-* `exp` (Expiry Date): Fecha de expiración
-* `cvv` (Card Verification Value): Código de validación de 3 dígitos
-* `name`: Nombre completo como aparece en la tarjeta
+-Guardar el value del input (número de Tarjeta)
 
-## Ejemplo
+-Convertir el numero a un array (Array.from())
 
-```html
-<form>
-  <div class="form-group">
-    <label for="cn">Número de tarjeta</label>
-    <input id="cn" name="cn" />
-  </div>
-  <div class="form-group">
-    <label for="exp">Fecha de vencimiento</label>
-    <input id="exp" name="exp" />
-  </div>
-  <div class="form-group">
-    <label for="cvv">CVV</label>
-    <input id="cvv" name="cvv" />
-  </div>
-  <div class="form-group">
-    <label for="name">Nombre completo</label>
-    <input id="name" name="name" />
-  </div>
-  <input type="submit" value="Pagar" />
-</form>
-```
+-revertir el orden del array-- reverse()
 
-```js
-const form = document.querySelector("form");
+-Identificar los numeros que esten en indices pares-- map(element, index)
 
-form.addEventListener("submit", e => {
-  e.preventDefault();
-  if (validateCardDetails(form)) {
-    console.log("datos válido... enviar...");
-  } else {
-    console.log("datos inválidos");
-  }
-});
+-A los numeros que esten en indices pares los multiplicamos x 2-- if()
 
-function validateCardDetails(element) {
-  //escribe tu código aqui
-}
-```
+-Si el resultado es mayor o igual a 10 se suman los digitos y se regresa al array-- if() 
 
-A la hora de hacer las validaciones, tu funcion debería de añadir la clase
-`.error` a los `<input>`s que no pasen la validación, o la clase `.success`
-en caso de que sí pase.
+-Si el resultado es menor a 10 no se cambia y se regresa al array--- else{}
 
-Usar el algoritmo de Luhn, el cual únicamente usa los numeros de la tarjeta de crédito. **No** usa el código de verificacion, fecha de vencimiento , el nombre, ni la dirección.
+-Sumamos todos los numeros del array-- reduce()
 
-#### Cosas a considerar:
+-Dividimos el resultado entre 10-- reduce()/10
 
-1. Necesitas usar métodos de arreglo (.forEach, .map,etc.) sin embargo, estos metodos son para **arreglos**. Si yo hago:
+-Si el residuo es igual a 0 regresamos (tarjeta valida)
 
-```javascript
-const form = document.querySelector("form");
-```
+-Si el residuo es diferente a 0 regresamos (tarjeta invalida)
 
-¿Tengo un arreglo? ¿Algo diferente? ¿Cómo le hago para implementar metodos de arreglo en otras cosas que no son arreglos?
+<!-- Revisar implementación para el boton desabilitado
+Materialize.toast('I am a toast!', 3000, 'rounded') -->
 
-2. La solucion se tiene que hacer **con ES6** con los temas vistos en clase.
+
+<!-- Funciones:
+-función que desabilita boton (por default y por condición)
+Revisar si se necesitan mas funciones
+-función que valida tarjeta -->
