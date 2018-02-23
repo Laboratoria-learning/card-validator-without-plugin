@@ -75,7 +75,7 @@ const form = document.querySelector("form");
 
 #### Validaciones por realizar
 
-Fecha vencimiento (solo 3 validaciones son necesarias)
+##### Fecha vencimiento (solo 3 validaciones son necesarias)
 
 1. No string vacio
 2. solo numeros
@@ -85,13 +85,13 @@ Fecha vencimiento (solo 3 validaciones son necesarias)
 6. Que el numero sea futuro (no hoy ni antes)
 7. Revisar el formato
 
-CVV (todas son necesarias)
+##### CVV (todas son necesarias)
 
 1. No string vacio
 2. Sean SOLO 3 digitos (no string ni boolean ni nada)
 3. los numeros sean positivos (que numeros son positivos de 3 digitos¿)
 
-Nombre (3 de las 6 son necesarias)
+##### Nombre (3 de las 6 son necesarias)
 
 1. No string vacio
 2. SOLO Sea string
