@@ -24,9 +24,9 @@
 
 -Dividimos el resultado entre 10-- reduce()/10
 
--Si el residuo es igual a 0 regresamos (tarjeta valida)
+-Si el residuo es igual a 0 se agregamos la clase .success al los inputs
 
--Si el residuo es diferente a 0 regresamos (tarjeta invalida)
+-Si el residuo es diferente a 0 agregamos la clase .error a los inputs
 
 <!-- Revisar implementación para el boton desabilitado
 Materialize.toast('I am a toast!', 3000, 'rounded') -->
