@@ -72,3 +72,38 @@ const form = document.querySelector("form");
 ¿Tengo un arreglo? ¿Algo diferente? ¿Cómo le hago para implementar metodos de arreglo en otras cosas que no son arreglos?
 
 2. La solucion se tiene que hacer **con ES6** con los temas vistos en clase.
+
+Validaciones por realizar:
+Fecha vencimiento (solo 3 validaciones son necesarias)
+No string vacio
+solo numeros
+que sean 2 digitos de año y 2 de mes
+los numeros no pueden ser negativos
+el mes no puede ser mayor a 12
+Que el numero sea futuro (no hoy ni antes)
+Revisar el formato
+CVV (todas son necesarias)
+No string vacio
+Sean SOLO 3 digitos (no string ni boolean ni nada)
+los numeros sean positivos (que numeros son positivos de 3 digitos¿)
+Nombre (3 de las 6 son necesarias)
+No string vacio
+SOLO Sea string
+Cada palabra maximo tiene 30 caracteres
+mayusculas y minusculas
+MINIMO 2 palabras
+No empieza con espacios
+
+
+//// lógica entre squad
+ poner el borde de los 4 imputs en rojo
+  luego una funcion genera que es la que trabaja con el submit,  y acepta 4 funciones por parámetros que corresponden a las funciones  de nombres,número vencimiento y CVV
+  en cada una de sus funciones tendría que validar las condiciones, por ejemplo: que no sea un string vacío y que en el caso de name sea menor a 30 caractéres, ya que ralice esa validación, debemos agregar una clase con add class para cambiar el color de borde del imput a verde.
+
+  recuerda que en la función más grande, se pasa como parámetro todo el form
+  y que el elemento que detona todo es submit
+
+
+  para lo de name con splice y ("") string vacio  para que con eso identifique que se separe los indices del array, tambien hay que ponerle lal condicional que el indice 0 del array sea !==" "
+
+  hay que parsearlo lo de la fecha para hacerlo number
