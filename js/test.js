@@ -1,37 +1,5 @@
-const validarNombre = (nombre) => {
-  console.log(nombre);
-  if (nombre === "") {
-    return false;
-  }
-  if(nombre.indexOf(" ") === 0){
-    return false;
-  }
-  const array = nombre.split(" ").filter((element) => {
-    /*otra opción .filter(palabra => palabra !=="")*/
-    // return element === "" ? false : true
-    if (element === ""){
-      return false;
-    } else {
-      return true;
-    }
-  })
-  if (array.length <2){
-    return false;
-  }
-  const arrayValidationWordsExtention = array.filter( word => {
-    if (word.length > 30){
-      return false;
-    }
-  /*(también se puede poner else)*/  return true;
-  })
-    if (array.length !== arrayValidationWordsExtention.length){
-      return false;
-    }
-    return true;
-}
 
-
-
+//reglas de testeo
 describe("Validar nombre", () => {
   it("Existe la función", () => {
     expect(validarNombre).toBeDefined();
@@ -61,8 +29,21 @@ describe("Validar nombre", () => {
     const nombreRandom =` ${fechaAhorita}`
     expect(validarNombre(nombreRandom)).toEqual(false);
   });
-  xit("indexOf", () =>{
+  /*xit("indexOf", () =>{
     const nombre =" nombre";
     expect(nombre.indexOf(" ")).toEqual(0);
-  })
+  })*/
 });
+
+describe('Probar entradas de nombre invalias', () => {
+  it('ingresa nombre de una "palabra"', () =>{
+    let inputNombre = document.querySelector('#name')
+    inputNombre.value = ''
+    const submit = document.querySelector('input[type="submit"]')
+    const result = document.querySelector('#testingId')
+
+    inputNombre.value = Date.now()
+    submit.click()
+    expect(result.innerHTML).toEqual('Malisimo')
+  })
+})

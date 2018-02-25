@@ -1,4 +1,11 @@
 
-input{
-  border
+#testingId:empty {
+  display: none;
+}
+
+#testingId.validate {
+  color: green;
+}
+#testingId.error{
+  color: red;
 }
