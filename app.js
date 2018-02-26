@@ -90,14 +90,16 @@ const getCardNumer = (numbers) =>{
 //comprueba que su residuo sea igual a 0 para validar tarjeta
 const valdCardNumer = resultArray => {
   const value = resultArray.reduce((sum,value) => sum + value, 0);
-    if (value %10 !== 0 || "") {
+    if (value %10 !== 0 || ""){
         cnInput.style.border = "2px solid #f91818";
-
+    }else if (value == 0){
+        cnInput.style.border = "2px solid #f91818";
     }else {
       cnInput.style.border = "2px solid #56d937";
       return true;
     }
 }
+
 
 /*funcion que valida que la fecha en el primer indice sea menor a 2
 en el segundo sea mayor a 0 en el tercero menor a 2 y en el cuarto mayor a 8
@@ -114,6 +116,8 @@ const valdDate = expirationDate =>{
         if ( digitsDate[2] < 2){
           if (digitsDate[3] >= 8){
             expInput.style.border = "2px solid #56d937";
+          }else {
+            expInput.style.border = "2px solid #f91818";
           }
         }
       }
@@ -127,7 +131,7 @@ que el usuario no pueda acceder si pone
 espacios, letras o numero menor a 99*/
 
 const valdCvv = elementCvv =>{
-  if (elementCvv > 99 && elementCvv < 1000) {
+  if (elementCvv > 100 && elementCvv < 1000) {
     cvvInput.style.border = "2px solid #56d937";
     const value = true;
   }else {
