@@ -1,0 +1,12 @@
+
+
+#testingId:empty {
+  display: none;
+}
+
+#testingId.success {
+  color: green;
+}
+#testingId.error{
+  color: red;
+}
