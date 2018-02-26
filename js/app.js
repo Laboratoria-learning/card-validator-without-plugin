@@ -1,6 +1,37 @@
-//function validationNumber(){
-//}
-const validarNombre = (name) => {
+//function para validar el número de tarjeta
+let validationNumber =  cardNumber;
+let luhn = (value) => {
+  if (isNaN(value)){
+    return false;
+  } else if (value.length <16) {
+    return false;
+  } else if (cardNumber.indexOf(" ") === 0) {
+    return false;
+
+
+  let sum = 0;
+  for (var i = cardNumber.length-1; i>= 0; i--){
+    let odd = parseInt(value.charAt(i))
+    if((i%2)=== 1)
+
+    if((odd*=2) >9) odd-=9
+       sum += odd
+    }
+     return (sum%10) == 0
+   }
+   console.log (luhn(validationNumber)? "verify ok" : "failed");
+}
+
+/*const paintInput = document.querySelector("#cn");
+const form = document.querySelector("form");
+
+form.addEventListener("submit", e => {
+  e.´reventDefault();
+  if (validationNumber return failed)
+})*/
+
+//función para validar el nombre
+const validationName = (name) => {
   console.log(name);
   if (name === "") {
     return false;
@@ -31,14 +62,17 @@ const validarNombre = (name) => {
     }
     return true;
 }
-
-
-
-
-
-
-
-
+//función para validar el CVV
+const functionvalidationCvv = element =>{
+  let inputValue = element.value;
+  if (inputValue >000) {
+    elemen.className = "success";
+    console.log("grate");
+  } else{
+    element.className= "error";
+    console.log("wrong");
+  }
+}
 //Funcion para corroborar todos los inputs
 const validateCardDetails = element => {//element sera el form completo
     const formArray = Array.from(form);
@@ -54,24 +88,17 @@ const validateCardDetails = element => {//element sera el form completo
     console.log(typeof expirationDate);
     console.log(name);
     */
-    //validarionNumber(cardNumber){
-
-    return validarNombre(name)
-
-    }
-
-
-
-//}
-
-//}
-const paintDiv =document.querySelector("#testingId");
-
+    validatioNumber(cardNumber);
+    validationName(name);
+    functionvalidationCvv(cvv);
+    fuctionvalidationExpiration(expirationDate);
+  };
+/*const paintDiv =document.querySelector("#testingId");
 const form = document.querySelector("form");
 
 form.addEventListener("submit", e => {
   e.preventDefault();
-  console.log(validateCardDetails(form))
+  //console.log(validateCardDetails(form))
   if (validateCardDetails(form)) {
     paintDiv.className ="validate"
     paintDiv.innerHTML ="valid"
@@ -83,6 +110,6 @@ form.addEventListener("submit", e => {
   }
 });
 
-/*function validateCardDetails(element) {
+function validateCardDetails(element) {
   //escribe tu código aqui
 }*/

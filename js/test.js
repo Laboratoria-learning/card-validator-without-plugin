@@ -37,7 +37,7 @@ describe("Validar nombre", () => {
 
 describe('Probar entradas de nombre invalias', () => {
   it('ingresa nombre de una "palabra"', () =>{
-    let inputNombre = document.querySelector('#name')
+    let inputNombre = document.querySelector('testingId')
     inputNombre.value = ''
     const submit = document.querySelector('input[type="submit"]')
     const result = document.querySelector('#testingId')
@@ -45,5 +45,6 @@ describe('Probar entradas de nombre invalias', () => {
     inputNombre.value = Date.now()
     submit.click()
     expect(result.innerHTML).toEqual('Malisimo')
+    expect(result.className).toEqual("error")
   })
 })

@@ -1,9 +1,10 @@
 
+
 #testingId:empty {
   display: none;
 }
 
-#testingId.validate {
+#testingId.success {
   color: green;
 }
 #testingId.error{
