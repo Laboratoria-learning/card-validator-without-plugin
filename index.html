@@ -22,15 +22,16 @@
             </div>
             <div class="form-group">
               <label for="expiration-date">Fecha de vencimiento</label>
-              <input id="expiration-date" name="expiration-date" />
+              <input type="number" min="1" max="12" placeholder="Mes" id="expiration-date" name="expiration-date" />
+              <input type="number" min="18" max="99" placeholder="Año" id="expiration-date" name="expiration-date" />
             </div>
             <div class="form-group">
               <label for="cvv">CVV</label>
-              <input id="cvv" name="cvv" />
+              <input type="number" min="0" max="999" id="cvv" name="cvv" /> <!--type asegura que no entren num negativos-->
             </div>
             <div class="form-group">
               <label for="name">Nombre completo</label>
-              <input id="name" name="name" />
+              <input type="text" id="name" name="name" />
             </div>
             <input type="submit" value="Pagar" />
           </form>
