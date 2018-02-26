@@ -18,7 +18,7 @@ La función debe recibir un elemento DOM que contenga
 
 ```html
 <form>
-  <div class="form-group">
+  <div>
     <label for="cn">Número de tarjeta</label>
     <input id="cn" name="cn" />
   </div>
