@@ -54,7 +54,8 @@ const validateCardNumber = cardNumberInput => {
     let cardNumber = cardNumberInput.value;
     if(cardNumber === "") {  
         cardNumberInput.className = "error";
-    }
+        return false;
+    } 
         
         cardNumberArray =cardNumber.split("");
             //Declarar un objeto vacío llamado "creditCardNumber_All"
