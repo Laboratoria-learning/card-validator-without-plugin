@@ -142,5 +142,5 @@ const valdCvv = elementCvv =>{
 
 //funcion que valida que no haya espacios vacios o que tenga numeros más de 30 letras
 const valdName = userName =>{
-console.log(userName);
+
 }
