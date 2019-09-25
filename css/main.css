@@ -1,0 +1,9 @@
+.error {
+    border-color: red;
+    border-bottom-width: 4px;
+}
+
+.success {
+    border-color: #339933;
+    border-bottom-width: 4px;
+}
