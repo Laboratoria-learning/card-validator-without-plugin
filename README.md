@@ -18,7 +18,7 @@ La función debe recibir un elemento DOM que contenga
 
 ```html
 <form>
-  <div class="form-group">
+  <div>
     <label for="cn">Número de tarjeta</label>
     <input id="cn" name="cn" />
   </div>
@@ -73,6 +73,32 @@ const form = document.querySelector("form");
 
 2. La solucion se tiene que hacer **con ES6** con los temas vistos en clase.
 
+
+
+Validaciones por realizar:
+
+Fecha vencimiento (solo 3 validaciones son necesarias)
+No string vacio
+solo numeros
+que sean 2 digitos de año y 2 de mes
+los numeros no pueden ser negativos
+el mes no puede ser mayor a 12
+Que el numero sea futuro (no hoy ni antes)
+Revisar el formato
+
+CVV (todas son necesarias)
+No string vacio
+Sean SOLO 3 digitos (no string ni boolean ni nada)
+los numeros sean positivos (que numeros son positivos de 3 digitos¿)
+
+Nombre (3 de las 6 son necesarias)
+No string vacio
+SOLO Sea string
+Cada palabra maximo tiene 30 caracteres
+mayusculas y minusculas
+MINIMO 2 palabras
+No empieza con espacios
+
 #### Validaciones por realizar
 
 ##### Fecha vencimiento (solo 3 validaciones son necesarias)
@@ -99,3 +125,4 @@ const form = document.querySelector("form");
 4. mayusculas y minusculas
 5. MINIMO 2 palabras
 6. No empieza con espacios
+

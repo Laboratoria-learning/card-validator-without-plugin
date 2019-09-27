@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Card Validator</title>
+  </head>
+  <body>
+    <header>
+      <h1 id="tittle">Card Validator</h1>
+    </header>
+    <form>
+      <div class="form-group">
+        <label for="cn">Número de tarjeta</label>
+        <input id="cn" name="cn" maxlength="16" />
+      </div>
+      <div class="form-group">
+        <label for="exp">Fecha de vencimiento</label>
+        <input id="exp" name="exp" maxlength="4" placeholder="month/year"/>
+      </div>
+      <div class="form-group">
+        <label for="cvv">CVV</label>
+        <input id="cvv" name="cvv" maxlength="3">
+      </div>
+      <div class="form-group">
+        <label for="name">Nombre completo</label>
+        <input id="name" name="name" maxlength="30"/>
+      </div>
+      <input id="btn" type="submit" value="Pagar" />
+    </form>
+    <script type="text/javascript" src="js/app.js"></script>
+  </body>
+</html>
